@@ -1,0 +1,130 @@
+.carousel {
+	position: relative;
+	width: 590px;
+	height: 470px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.carousel ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.carousel a {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+
+.carousel img {
+	width: 100%;
+}
+
+.carousel button {
+	outline: none;
+	border: none;
+}
+
+.carousel .car-control {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	width: 24px;
+	height: 40px;
+	margin-top: -20px;
+	background-color: rgba(0, 0, 0, .2);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 15px 15px;
+	cursor: pointer;
+	transition: background-color .2s;
+}
+
+.carousel .car-control.hover {
+	background-color: rgba(0, 0, 0, .4);
+}
+
+.carousel .car-control.car-control-prev {
+	left: 0;
+	background-image: url(../icons/prev.png);
+}
+
+.carousel .car-control.car-control-next {
+	right: 0;
+	background-image: url(../icons/next.png);
+}
+
+.carousel .car-indicator {
+	position: absolute;
+	left: 46px;
+	bottom: 20px;
+	z-index: 2;
+	width: 152px;
+	height: 18px;
+	font-size: 0;
+	cursor: pointer;
+}
+
+.carousel .car-indicator .indicator-btn {
+	display: inline-block;
+	position: relative;
+	width: 18px;
+	height: 18px;
+	margin-right: 1px;
+}
+
+.carousel .car-indicator .indicator-btn::after,
+.carousel .car-indicator .indicator-btn::before {
+	content: "";
+	display: block;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.carousel .car-indicator .indicator-btn::after {
+	top: 4px;
+	left: 4px;
+	width: 6px;
+	height: 6px;
+	border: 2px solid #b9b3ba;
+}
+
+.carousel .car-indicator .indicator-btn.active::after {
+	background-color: #fff;
+	border: 2px solid #fff;
+}
+
+.carousel .car-indicator .indicator-btn.active::before {
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	background-color: rgba(255, 255, 255, .3);
+}
+
+.car-wrapper {
+	height: 100%;
+}
+
+.car-wrapper .car-list {
+	position: relative;
+	height: 100%;
+}
+
+.car-wrapper .car-item {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity .5s;
+}
+
+.car-wrapper .car-item.active {
+	opacity: 1;
+	z-index: 1;
+}

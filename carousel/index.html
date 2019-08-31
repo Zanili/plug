@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="css/carousel.css" />
+</head>
+
+<body>
+  <div class="carousel js-carousel">
+    <button class="car-control car-control-prev" data-dir="prev"></button>
+    <button class="car-control car-control-next" data-dir="next"></button>
+
+    <div class="car-wrapper">
+    	<ul class="car-list">
+    		<li class="car-item active">
+    			<a href="" class="car-lk">
+    				<img src="images/1.jpg" alt="" class="car-img">
+    			</a>
+    		</li>
+    		<li class="car-item">
+    			<a href="" class="car-lk">
+    				<img src="images/2.jpg" alt="" class="car-img">
+    			</a>
+    		</li>
+    		<li class="car-item">
+    			<a href="" class="car-lk">
+    				<img src="images/3.jpg" alt="" class="car-img">
+    			</a>
+    		</li>
+    		<li class="car-item">
+    			<a href="" class="car-lk">
+    				<img src="images/4.jpg" alt="" class="car-img">
+    			</a>
+    		</li>
+    		<li class="car-item">
+    			<a href="" class="car-lk">
+    				<img src="images/5.jpg" alt="" class="car-img">
+    			</a>
+    		</li>
+    		<li class="car-item">
+    			<a href="" class="car-lk">
+    				<img src="images/6.jpg" alt="" class="car-img">
+    			</a>
+    		</li>
+    		<li class="car-item">
+    			<a href="" class="car-lk">
+    				<img src="images/7.jpg" alt="" class="car-img">
+    			</a>
+    		</li>
+    		<li class="car-item">
+    			<a href="" class="car-lk">
+    				<img src="images/8.jpg" alt="" class="car-img">
+    			</a>
+    		</li>
+    	</ul>
+    </div>
+
+    <div class="car-indicator">
+			<i class="indicator-btn active"></i>
+			<i class="indicator-btn"></i>
+			<i class="indicator-btn"></i>
+			<i class="indicator-btn"></i>
+			<i class="indicator-btn"></i>
+			<i class="indicator-btn"></i>
+			<i class="indicator-btn"></i>
+			<i class="indicator-btn"></i>
+		</div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/carousel.js"></script>
+  <script type="text/javascript">
+  	// new Carousel({
+   //      dom: '.js-carousel',
+   //      autoplay: true,
+   //      speed: 3000
+   //  });
+
+
+    $('.js-carousel').carousel({
+      autoplay: true,
+      speed: 3000
+    });
+
+    // $('.js-carousel').animate({
+    //     width: '100px',
+    //     height: '200px'
+    // })
+  </script>
+</body>
+</html>
